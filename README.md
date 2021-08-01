@@ -1,6 +1,6 @@
 # Duplicate image finder
 
-## Usage
+## Help
 
 ```Shell
 python .\dpfinder\main.py -h
