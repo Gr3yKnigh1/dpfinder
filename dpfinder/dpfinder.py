@@ -19,12 +19,6 @@ def is_image(path: str) -> bool:
 	return True
 
 
-def walk_images_in_dir(path: str, excluded: list[str]=None) -> Generator[str, None, None]:
-	for file in walk_files_in_dir(path, excluded):
-		if is_image(file):
-			yield file
-
-
 class DuplicateFinder(object):
 	'''
 	If you want to increase performance, try to increase 'hash_size'
@@ -47,8 +41,9 @@ class DuplicateFinder(object):
 
 	
 	def find_duplicates(self) -> None:
-		for image_path in walk_images_in_dir(self.target):
-			self.__handle_image(image_path)
+		for file in walk_files_in_dir(path, excluded):
+			if is_image(file):
+				self.__handle_image(image_path)
 
 
 	def __handle_image(self, path: str) -> None:
