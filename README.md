@@ -1,8 +1,12 @@
 # Duplicate image finder
 
-## Usage
+This will find all duplicate photos and store them in some directory.
 
-```Shell
+## Help
+
+Use `-h` arg for getting help 
+
+```shell
 python .\dpfinder\main.py -h
 
 ```
