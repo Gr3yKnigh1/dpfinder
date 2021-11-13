@@ -2,11 +2,14 @@
 
 This will find all duplicate photos and store them in some directory.
 
-## Help
+## Run
 
-Use `-h` arg for getting help 
-
+1. Install requirements from `requirements.txt`
 ```shell
-python .\dpfinder\main.py -h
-
+pip install -r requirements.txt
+```
+  
+2. Run `dpfinder`
+```shell
+python src/dpfinder -h
 ```
