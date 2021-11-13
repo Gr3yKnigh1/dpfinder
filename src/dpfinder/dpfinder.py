@@ -19,6 +19,7 @@ def is_image(path: str) -> bool:
 	return True
 
 
+# TODO(gr3yknigh1): Add documentation
 class DuplicateFinder(object):
 	'''
 	If you want to increase performance, try to increase 'hash_size'
