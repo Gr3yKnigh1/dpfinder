@@ -12,7 +12,8 @@ parser.add_argument("--out", help="output directory path", default=".\out")
 args = parser.parse_args()
 
 
-def main() -> None:
+# TODO(gr3yknigh1): Make it installable (maybe `zipapp`)
+def main() -> int:
 
 	target_path = args.target
 	out_path = args.out
@@ -27,6 +28,8 @@ def main() -> None:
 
 	df.find_duplicates()
 
+	return 0
+
 
 if __name__ == '__main__':
-	main()
+	raise SystemExit(main())
