@@ -1,8 +1,8 @@
 # Duplicate image finder
 
-This will find all duplicate photos and store them in some directory.
+Searches for duplicate photos using a hash and moves them to a separate directory.
 
-## Run
+## Usage
 
 1. Install requirements from `requirements.txt`
 ```shell
