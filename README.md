@@ -1,6 +1,6 @@
-# Duplicate image finder
+# Duplicate photo finder
 
-Searches for duplicate photos using a hash and moves them to a separate directory.
+Searches for duplicate photos and moves them to a separate directory.
 
 ## Usage
 
