@@ -3,12 +3,12 @@ import shutil
 import argparse
 import os
 
-from dpfinder import DuplicateFinder
+from .dpfinder import DuplicateFinder
 
 
 parser = argparse.ArgumentParser()
 parser.add_argument("target", help="target directory path")
-parser.add_argument("--out", help="output directory path", default=".\out")
+parser.add_argument("--out", help="output directory path", default="out")
 args = parser.parse_args()
 
 
@@ -25,7 +25,6 @@ def main() -> int:
 	df = DuplicateFinder(target=target_path, hash_size=16)
 	df.on_detection.reg(lambda i1, i2: print(f"Detected duplicates: [{i1}] to [{i2}]"))
 	df.on_detection.reg(lambda i1, i2: shutil.move(i1, out_path))
-
 	df.find_duplicates()
 
 	return 0

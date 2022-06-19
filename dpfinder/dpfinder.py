@@ -7,8 +7,8 @@ import pathlib
 from PIL import Image
 import imagehash
 
-from event import event
-from walk import walk_files_in_dir
+from .event import event
+from .walk import walk_files_in_dir
 
 
 def is_image(path: str) -> bool:
@@ -40,11 +40,11 @@ class DuplicateFinder(object):
 		self.hash_size = hash_size
 		self.on_detection = event() # Callable[[str, str], None]
 
-	
+
 	def find_duplicates(self) -> None:
-		for file in walk_files_in_dir(path, excluded):
-			if is_image(file):
-				self.__handle_image(image_path)
+		for file_path in walk_files_in_dir(self.target,):
+			if is_image(file_path):
+				self.__handle_image(file_path)
 
 
 	def __handle_image(self, path: str) -> None:

@@ -2,14 +2,23 @@
 
 Searches for duplicate photos and moves them to a separate directory.
 
-## Usage
+## Installation
 
-1. Install requirements from `requirements.txt`
-```shell
-pip install -r requirements.txt
+Clone repo:
+
+```bash
+$ git clone https://github.com/gr3yknigh1/dpfinder
 ```
-  
-2. Run `dpfinder`
-```shell
-python src/dpfinder -h
+
+Install with pip:
+
+```bash
+$ pip install dpfinder
 ```
+
+Try help command:
+
+```bash
+$ dpfinder -h
+```
+
